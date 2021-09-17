@@ -1,4 +1,4 @@
-package br.com.zup;
+package br.com.zup.ExemploContato;
 
 
 import java.util.Scanner;
@@ -18,6 +18,8 @@ public class Main {
         System.out.println("Diga sua idade: ");
         int idade = leitor.nextInt();
 
+        Contato obj_contato2 = new Contato(nome, telefone, email, idade);
+
         obj_contato.nome = nome;
         obj_contato.email = email;
         obj_contato.telefone = telefone;
@@ -27,5 +29,12 @@ public class Main {
         System.out.println("Seu e-mail é: " + email);
         System.out.println("Seu telefone é: " + telefone);
         System.out.println("Sua idade é: " + idade);
+        System.out.println();
+        System.out.println("Seu nome é: " + obj_contato2.nome);
+        System.out.println("Seu e-mail é: " + obj_contato2.email);
+        System.out.println("Seu telefone é: " + obj_contato2.telefone);
+        System.out.println("Sua idade é: " + obj_contato2.idade);
+
+
     }
 }
