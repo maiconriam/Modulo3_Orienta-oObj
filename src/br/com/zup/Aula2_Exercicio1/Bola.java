@@ -1,4 +1,4 @@
-package br.com.zup.Exercicio1;
+package br.com.zup.Aula2_Exercicio1;
 
 public class Bola {
     String circunferencia;
