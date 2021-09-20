@@ -1,7 +1,5 @@
 package br.com.zup.Aula2_LevelUp2;
 
-import br.com.zup.Aula2_LevelUp.Pais;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
