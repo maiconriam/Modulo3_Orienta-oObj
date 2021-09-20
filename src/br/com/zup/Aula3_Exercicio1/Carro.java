@@ -1,4 +1,4 @@
-package br.com.zup.Aula3Exercicio1;
+package br.com.zup.Aula3_Exercicio1;
 
 public class Carro {
     String nome;
