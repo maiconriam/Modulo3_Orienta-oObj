@@ -5,6 +5,8 @@ public class Main {
         ContaBancaria maicon = new ContaBancaria("8484848484", 500, "Maicon Riam");
         //Extrato
         maicon.mostrarDados();
+        maicon.setNumeroDaConta("489484844848");
+        maicon.setNomeDoCorrentista("Amanda Mandira");
 
         //Saque da conta
         maicon.saque(400);

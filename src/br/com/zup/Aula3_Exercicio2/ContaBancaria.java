@@ -1,13 +1,37 @@
 package br.com.zup.Aula3_Exercicio2;
 
 public class ContaBancaria {
-    String numeroDaConta;
-    double saldo;
-    String nomeDoCorrentista;
+    private String numeroDaConta;
+    private double saldo;
+    private String nomeDoCorrentista;
 
     public ContaBancaria(String numeroDaConta, double saldo, String nomeDoCorrentista){
         this.numeroDaConta = numeroDaConta;
         this.saldo = saldo;
+        this.nomeDoCorrentista = nomeDoCorrentista;
+    }
+
+    public String getNumeroDaConta(){
+        return numeroDaConta;
+    }
+
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public String getNomeDoCorrentista(){
+        return nomeDoCorrentista;
+    }
+
+    public void setNumeroDaConta(String numeroDaConta){
+        this.numeroDaConta = numeroDaConta;
+    }
+
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+
+    public void setNomeDoCorrentista(String nomeDoCorrentista){
         this.nomeDoCorrentista = nomeDoCorrentista;
     }
 

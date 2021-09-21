@@ -21,7 +21,7 @@ public class CartaoCredito {
     }
 
     public void realizaComprar(double valor){
-        if(limite - saldo >= valor){
+        if(limite - saldo > valor){
             limite = limite - valor - saldo;
             saldo = saldo + valor;
             System.out.println("Compra efeituada com sucesso.");
