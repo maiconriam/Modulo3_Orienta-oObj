@@ -61,7 +61,7 @@ public class Elevador {
             if(andarAtual - descer > terreo){
                 andarAtual = andarAtual - descer;
                 System.out.println("Você desceu para o " + andarAtual + "º andar");
-            }if(andarAtual -descer == terreo){
+            }if(andarAtual - descer == terreo){
                 System.out.println("Você desceu " + descer + "º andares e agora está no terreo");
             }else{
                 System.out.println("O elevador não consegue passar do chão");
