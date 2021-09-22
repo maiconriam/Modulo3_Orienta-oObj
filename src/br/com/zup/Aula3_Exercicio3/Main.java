@@ -20,6 +20,6 @@ public class Main {
         System.out.println("-----");
 
         //Elevador descendo
-        exemplo.desce(3);
+        exemplo.desce(4);
     }
 }
