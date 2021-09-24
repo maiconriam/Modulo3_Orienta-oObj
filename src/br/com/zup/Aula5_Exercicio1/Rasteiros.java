@@ -17,7 +17,6 @@ public class Rasteiros extends Inimigo{
     }
 
     public double aplicarDano(){
-        double dano = getVida() - danoEspinhos;
-        return dano;
+        return danoEspinhos;
     }
 }

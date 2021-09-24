@@ -17,7 +17,6 @@ public class Mago extends Heroi{
     }
 
     public double aplicarDano(){
-        double dano = getVida() - poderMagico;
-        return dano;
+        return poderMagico;
     }
 }

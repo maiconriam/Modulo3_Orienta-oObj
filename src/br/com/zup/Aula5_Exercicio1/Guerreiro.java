@@ -17,7 +17,6 @@ public class Guerreiro extends Heroi{
     }
 
     public double aplicarDano(){
-        double dano = getVida() - poderAtaque;
-        return dano;
+        return poderAtaque;
     }
 }
