@@ -49,11 +49,17 @@ public class Professor extends Funcionario{
     }
 
     @Override
-    public void mostrarDados() {
-        super.mostrarDados();
-        System.out.println("Nivel de graduação: " + nivelGraduacao);
-        System.out.println("Displina: " + disciplina);
-        System.out.println("Quantidade de alunos: " + qtdAlunos);
-        System.out.println("Turmas: " + qtdTurmas);
+    public String toString(){
+        StringBuilder retornoDoMetodo = new StringBuilder();
+        retornoDoMetodo.append("\n Nome: " + getNome());
+        retornoDoMetodo.append("\n CPF: " + getCpf());
+        retornoDoMetodo.append("\n Número do Registro: " + getNumeroRegistro());
+        retornoDoMetodo.append("\n Orgão de Lotoção:" + getOrgaoLotacao());
+        retornoDoMetodo.append("\n Salario: " + getSalario());
+        retornoDoMetodo.append("\n Nivel de graduação: " +nivelGraduacao);
+        retornoDoMetodo.append("\n Disciplina: " +disciplina);
+        retornoDoMetodo.append("\n Quantidade de Alunos: " +qtdAlunos);
+        retornoDoMetodo.append("\n Quantidade de Turmas: " +qtdTurmas);
+        return retornoDoMetodo.toString();
     }
 }

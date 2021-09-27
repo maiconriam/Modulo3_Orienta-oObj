@@ -60,11 +60,13 @@ public class Funcionario {
         return aumentoSalario;
     }
 
-    public void mostrarDados(){
-        System.out.println("Nome: " + nome);
-        System.out.println("CPF: " + cpf);
-        System.out.println("Número do registro: " + numeroRegistro);
-        System.out.println("Orgão de Lotoção: " + orgaoLotacao);
-        System.out.println("Salário: " + salario);
+    public String toString() {
+        StringBuilder retornoDoDados = new StringBuilder();
+        retornoDoDados.append("\nNome: " + getNome());
+        retornoDoDados.append("\n CPF: " + getCpf());
+        retornoDoDados.append("\n Número do Registro: " + getNumeroRegistro());
+        retornoDoDados.append("\n Orgão de Lotoção:" + getOrgaoLotacao());
+        retornoDoDados.append("\n Salario: " + getSalario());
+        return retornoDoDados.toString();
     }
 }

@@ -1,50 +1,45 @@
 package br.com.zup.Aula5_Exercicio3;
 
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Coloborador extends Funcionario{
-    private Professor[] professoresSupervisionados = new Professor[10];
-    private int contador = 0;
-    private int qtdProfessores;
+    List<Professor> professoresSupervisionados = new ArrayList<>();
+
 
     public Coloborador(String nome, String cpf, double numeroRegistro, String orgaoLotacao, double salario) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
     }
 
-    public Professor[] getProfessoresSupervisionados() {
+    public void adicionarProfessor(Professor professor){
+        if(professoresSupervisionados.size() < 10){
+            professoresSupervisionados.add(professor);
+        }else{
+            System.out.println("Você ja tem 10 professores supervisionados.");
+        }
+    }
+
+    public List<Professor> getProfessoresSupervisionados(){
         return professoresSupervisionados;
     }
 
-    public void setProfessoresSupervisionados(Professor[] professoresSupervisionados) {
-        this.professoresSupervisionados = professoresSupervisionados;
-    }
-
-    public int getQtdProfessores() {
-        return qtdProfessores;
-    }
-
-    public void setQtdProfessores(int qtdProfessores) {
-        this.qtdProfessores = qtdProfessores;
-    }
-
-    public void adicionarProfessor(Professor professor){
-        professoresSupervisionados[contador] = professor;
-        contador ++;
-        qtdProfessores ++;
-    }
-
-    public void mostrarProfessores(){
-        for (int indice = 0; indice < contador; indice ++){
-            System.out.println("Nome: " + professoresSupervisionados[indice].getNome());
-            System.out.println("CPF: " + professoresSupervisionados[indice].getCpf());
-            System.out.println("Número do registro: " + professoresSupervisionados[indice].getNumeroRegistro());
-            System.out.println("Orgão de Lotoção: " + professoresSupervisionados[indice].getOrgaoLotacao());
-            System.out.println("Salário: " + professoresSupervisionados[indice].getSalario());
-            System.out.println("Nivel de graduação: " + professoresSupervisionados[indice].getNivelGraduacao());
-            System.out.println("Displina: " + professoresSupervisionados[indice].getDisciplina());
-            System.out.println("Quantidade de alunos: " + professoresSupervisionados[indice].getQtdAlunos());
-            System.out.println("Turmas: " + professoresSupervisionados[indice].getQtdTurmas());
+    public void mostrarProfessor(){
+        for(Professor referencia : professoresSupervisionados){
+            System.out.println(referencia);
         }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder retornoDoDados = new StringBuilder();
+        retornoDoDados.append("\nNome: " + getNome());
+        retornoDoDados.append("\n CPF: " + getCpf());
+        retornoDoDados.append("\n Número do Registro: " + getNumeroRegistro());
+        retornoDoDados.append("\n Orgão de Lotoção:" + getOrgaoLotacao());
+        retornoDoDados.append("\n Salario: " + getSalario());
+        retornoDoDados.append("\n Professores supervisionados: " + getProfessoresSupervisionados());
+        return retornoDoDados.toString();
     }
 
     @Override

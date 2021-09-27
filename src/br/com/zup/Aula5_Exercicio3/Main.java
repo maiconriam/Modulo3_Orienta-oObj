@@ -6,5 +6,7 @@ public class Main {
         Professor a = new Professor("Maicon", "54848", 2, "SC", 1000, "a", "b", 10, 2, turma1);
         Coloborador b = new Coloborador("IASKD", "8484", 2, "SC", 1000);
 
+        b.adicionarProfessor(a);
+        System.out.println(b);
     }
 }

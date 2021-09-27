@@ -27,9 +27,15 @@ public class Administrativo extends Funcionario{
     }
 
     @Override
-    public void mostrarDados() {
-        super.mostrarDados();
-        System.out.println("Função: " + funcao);
-        System.out.println("Senioridade: " + senioridade);
+    public String toString() {
+        StringBuilder retornoDoDados = new StringBuilder();
+        retornoDoDados.append("\nNome: " + getNome());
+        retornoDoDados.append("\n CPF: " + getCpf());
+        retornoDoDados.append("\n Número do Registro: " + getNumeroRegistro());
+        retornoDoDados.append("\n Orgão de Lotoção:" + getOrgaoLotacao());
+        retornoDoDados.append("\n Salario: " + getSalario());
+        retornoDoDados.append("\n Função: " + funcao);
+        retornoDoDados.append("\n Senioridade: " + senioridade);
+        return retornoDoDados.toString();
     }
 }
