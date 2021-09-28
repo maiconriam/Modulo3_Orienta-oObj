@@ -1,19 +1,17 @@
 package br.com.zup.Aula5_Exercicio3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Professor extends Funcionario{
     private String nivelGraduacao;
     private String disciplina;
-    private int qtdAlunos;
-    private int qtdTurmas;
-    private Turma turma;
+    private List<Turma> turma = new ArrayList<>();
 
-    public Professor(String nome, String cpf, double numeroRegistro, String orgaoLotacao, double salario, String nivelGraduacao, String disciplina, int qtdAlunos, int qtdTurmas, Turma turma) {
+    public Professor(String nome, String cpf, double numeroRegistro, String orgaoLotacao, double salario, String nivelGraduacao, String disciplina) {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario);
         this.nivelGraduacao = nivelGraduacao;
         this.disciplina = disciplina;
-        this.qtdAlunos = qtdAlunos;
-        this.qtdTurmas = qtdTurmas;
-        this.turma = turma;
     }
 
     public String getNivelGraduacao() {
@@ -32,20 +30,16 @@ public class Professor extends Funcionario{
         this.disciplina = disciplina;
     }
 
-    public int getQtdAlunos() {
-        return qtdAlunos;
+    public List<Turma> getTurma() {
+        return turma;
     }
 
-    public void setQtdAlunos(int qtdAlunos) {
-        this.qtdAlunos = qtdAlunos;
+    public void setTurma(List<Turma> turma) {
+        this.turma = turma;
     }
 
-    public int getQtdTurmas() {
-        return qtdTurmas;
-    }
-
-    public void setQtdTurmas(int qtdTurmas) {
-        this.qtdTurmas = qtdTurmas;
+    public void adicionarTurma(Turma addTurma){
+        turma.add(addTurma);
     }
 
     @Override
@@ -58,8 +52,7 @@ public class Professor extends Funcionario{
         retornoDoMetodo.append("\n Salario: " + getSalario());
         retornoDoMetodo.append("\n Nivel de graduação: " +nivelGraduacao);
         retornoDoMetodo.append("\n Disciplina: " +disciplina);
-        retornoDoMetodo.append("\n Quantidade de Alunos: " +qtdAlunos);
-        retornoDoMetodo.append("\n Quantidade de Turmas: " +qtdTurmas);
+        retornoDoMetodo.append("\n Turma: " + turma);
         return retornoDoMetodo.toString();
     }
 }

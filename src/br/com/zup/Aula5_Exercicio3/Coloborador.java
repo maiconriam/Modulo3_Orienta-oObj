@@ -24,12 +24,6 @@ public class Coloborador extends Funcionario{
         return professoresSupervisionados;
     }
 
-    public void mostrarProfessor(){
-        for(Professor referencia : professoresSupervisionados){
-            System.out.println(referencia);
-        }
-    }
-
     @Override
     public String toString() {
         StringBuilder retornoDoDados = new StringBuilder();
